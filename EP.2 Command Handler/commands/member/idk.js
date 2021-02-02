@@ -8,10 +8,10 @@ module.exports = class TestCommand extends Command {
   constructor(client) {
     super(client, {
       name: "COMMAND NAME",
-      group: "member",
+      group: "FOLDER NAME",
       memberName: "COMMAND NAME",
       guildOnly: true,
-      description: "test"
+      description: "DESCRIPTION"
     });
   }
 
