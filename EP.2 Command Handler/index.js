@@ -3,7 +3,6 @@ const { Structures } = require("discord.js");
 const { MessageEmbed } = require("discord.js");
 const { owner, prefix, token } = require('./config.json');
 const path = require("path");
-const figlet = require('figlet');
 
 const client = new CommandoClient({
   commandPrefix: prefix,
@@ -13,8 +12,7 @@ const client = new CommandoClient({
 
 client.registry.registerDefaultTypes()
 client.registry.registerGroups([
-  ["member", "Member Commands"],
-  ["test", "Test Commands"]
+  ["member", "Member Commands"]
 ])
 
 client.registry.registerDefaultGroups()
@@ -29,9 +27,7 @@ client.registry.registerDefaultCommands({
 client.registry.registerCommandsIn(path.join(__dirname, "commands"))
 
 client.on("ready", () => {
-  figlet('Made By GlitchyBrick', (err, result) => {
-    console.log(err || result)
-  })
+  console.log('Ready')
 });
 
 client.login(token);
