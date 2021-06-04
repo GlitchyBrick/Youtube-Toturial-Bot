@@ -9,7 +9,6 @@ client.on('ready', () => {
 
 status.mobile({
     STATUS: "TEST",
-    TOKEN: token,
     MOBILE: true
 })
 
